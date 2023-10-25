@@ -23,11 +23,15 @@ RabbitMQ no Docker: docker run -d
 Roteiro para testar a implementação:
 
 1 - Invocar ApiUserService e adicionar um usuário ao banco de dados do users.db   
-   - O serviço criará um evento que ApiPostService vai consumir e adicionará o usuário em posts.db
+   - O serviço criará um evento que ApiPostService vai consumir e adicionará o usuário em posts.db
+     
 2 - Acessar ApiPostService e adicionar um post para o usuário que foi incluído
+
 3 - Em ApiPostService e carregar o post (GET) e o usuário do banco de dados de posts.db
+
 4 - Chamar ApiUserService e alterar o nome do usuário incluído   
-   - O serviço criará um evento que ApiPostService consome e atualizando o nome do usuário em posts.db
+   - O serviço criará um evento que ApiPostService consome e atualizando o nome do usuário em posts.db
+
 5 - Invocar ApiPostService e carregar o post (GET) e o usuário renomeado em posts.db
 
 
